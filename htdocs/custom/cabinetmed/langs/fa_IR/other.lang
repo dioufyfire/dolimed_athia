@@ -1,0 +1,6 @@
+# Dolibarr language file - fr_FR - other
+CHARSET=یوتی‌اف-۸
+Notify_NOTIFY_VAL_FAC=مشاوره اعتبارسنجی بیمار
+ProfIdShortDesc=<b>شناسه پروفسور. %s</b> اطلاعات یکسانی است که به بیمار بستگی دارد.<br>به عنوان مثال، pour le pays <b>%s</b>، il s'agit du code <b>%s>TXPROTECT-9a4b739-TX1.
+NewCompanyToDolibarr=بیمار %s
+CustomerPaymentDoneInDolibarr=پرداخت بیمار %s

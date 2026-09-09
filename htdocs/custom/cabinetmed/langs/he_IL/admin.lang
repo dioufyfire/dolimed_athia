@@ -1,0 +1,37 @@
+# Dolibarr language file - en_US - admin
+CHARSET=UTF-8
+ExtraFieldsThirdParties=תכונות משלימות (צד שלישי/מטופל)
+ExtraFieldsContacts=מאפיינים משלימים (אנשי קשר)
+UseSearchToSelectCompany= השתמש בשדה עם השלמה אוטומטית כדי לבחור מטופל (במקום רשימה משולבת).
+ActivityStateToSelectCompany= הוסף אפשרות סינון כדי להסתיר/להציג מטופלים שנמצאים או שלא נמצאים במעקב
+ViewFullDateActions= הצג את התאריך המלא של הפעולות בכרטיס המטופל
+ModuleFamilyCrm=ניהול קשרי לקוחות או מטופלים (CRM)
+GenericMaskCodes2=<b>{cccc}</b> קוד הלקוח/מטופל על n תווים<br><b>{cccc000}</b> קוד הלקוח/מטופל על n תווים ואחריו מונה המוקדש ל לקוח. מונה זה המוקדש ללקוח מאופס באותו הזמן כמו המונה הגלובלי.<br><b>{tttt}</b> הקוד של סוג צד שלישי על n תווים (ראה מילון-סוגי צד שלישי).<br>
+
+# Modules= undefined
+Module1Name= צדדים שלישיים/מטופלים
+Module1Desc= ניהול מטופלים ואנשי קשר
+Permission121= התייעץ עם המטופל
+Permission122= צור/שנה מטופל (+ייעוץ ובדיקות)
+Permission125= מחיקת מטופלים (+ייעוץ ובדיקות)
+Permission126= חולי ייצוא
+Permission262= הרחב את הגישה לכל המטופלים (לא רק לאלו המקושרים למשתמש).<br>לא יעיל עבור משתמשים חיצוניים (תמיד מוגבל לעצמם עבור הצעות, הזמנות, חשבוניות, חוזים וכו').<br>לא יעיל עבור פרויקטים (רק כללים לגבי הרשאות פרויקט, נראות וענייני הקצאה).
+Permission281= התייעץ עם כל אנשי הקשר
+Permission282= יצירה/שינוי של אנשי קשר
+Permission283= מחיקת אנשי קשר
+Permission286= ייצוא אנשי קשר
+DictionaryCompanyType= מין המטופל
+DictionaryCompanyJuridicalType= סוג הפעילות של המטופל או מעמד משפטי של צדדים שלישיים
+DictionaryTypeContact= סוגי אנשי קשר
+MotifConsultation=סיבת ההתייעצות
+DiagnostiqueLesionnel=אבחון נגעים
+Examens=בחינות
+ExamenConclusion=סיכום הבחינה
+BankNameList=רשימת בנקים
+
+CompanySetup= הגדרת מודול מטופל
+CompanyCodeChecker=מודל ליצירה ובדיקת קוד מטופל
+CashDeskThirdPartyForSell=מטופל גנרי למכירת מוצרים
+CashDeskBankAccountForSell=חשבון בנק לשימוש במזומן
+CashDeskBankAccountForCheque=חשבון בנק לשימוש להפקדות צ'קים
+CashDeskBankAccountForCB=חשבון בנק לשימוש עבור כרטיס אשראי

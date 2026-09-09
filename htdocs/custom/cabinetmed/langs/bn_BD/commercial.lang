@@ -1,0 +1,15 @@
+# Dolibarr language file - en_US - commercial
+CHARSET=ইউটিএফ-৮
+ActionOnCompany=রোগীর উপর ঘটনা
+ActionOnContact=যোগাযোগের ইভেন্ট
+SalesRepresentative=এর পরে
+SalesRepresentatives=এর পরে
+SalesRepresentativeFollowUp=ডাক্তার (রেফারেন্ট)
+SalesRepresentativeSignature=ডাক্তার (স্বাক্ষর)
+NoSalesRepresentativeAffected=কোনও নির্দিষ্ট ডাক্তার নেই
+ShowPatient=ধৈর্য ধরুন
+ListOfCustomers=তৃতীয় পক্ষ/রোগীদের তালিকা
+ListOfPatients=রোগীদের তালিকা
+TasksHistoryForThisContact=এই পরিচিতি সম্পর্কে পদক্ষেপ
+ActionAC_FAC=ইমেলের মাধ্যমে পরামর্শ পাঠান
+ActionAC_REL=ইমেলের মাধ্যমে পরামর্শ পুনরায় পাঠান

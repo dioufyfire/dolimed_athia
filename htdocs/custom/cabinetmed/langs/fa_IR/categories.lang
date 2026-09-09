@@ -1,0 +1,10 @@
+# Dolibarr language file - en_US - categories
+CHARSET=یوتی‌اف-۸
+PatientsCategoriesArea=دسته بندی های بخش بیمار
+PatientIsInCustomersCategories=این بیمار در دسته‌های زیر قرار دارد
+PatientsCategoryShort=دسته بندی بیماران
+PatientsCategoriesShort=دسته بندی بیماران
+ThisCategoryHasNoCustomer=این دسته بندی بیمار ندارد
+AssignedToPatients=بیمار را تنظیم کنید
+AssignedToThePatients=بیمار را تنظیم کنید
+CatCusListPatients=فهرست دسته‌های بیماران

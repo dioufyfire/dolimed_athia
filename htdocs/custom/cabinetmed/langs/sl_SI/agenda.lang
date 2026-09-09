@@ -1,0 +1,5 @@
+# Dolibarr language file - fr_FR - agenda
+CHARSET=UTF-8
+NewCompanyToDolibarr=Pacientova kreacija
+AgendaShowBirthdayEvents=Afficher anniversaires dopisniki
+AgendaHideBirthdayEvents=Cacher anniversaires dopisniki

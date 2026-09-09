@@ -1,0 +1,46 @@
+# Configuration locale / secrets
+htdocs/conf/conf.php
+*.env
+.env
+.env.*
+
+# Documents Dolibarr / Dolimed
+documents/
+htdocs/documents/
+
+# Cache / temporaires
+tmp/
+temp/
+cache/
+htdocs/cache/
+htdocs/temp/
+
+# Logs
+*.log
+logs/
+
+# Sauvegardes éditeur
+*.bak
+*.old
+*.orig
+*~
+*.swp
+*.swo
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Archives / dumps
+*.sql
+*.sql.gz
+*.tar
+*.tar.gz
+*.zip
+
+# Certificats / clés
+*.key
+*.pem
+*.p12
+*.pfx

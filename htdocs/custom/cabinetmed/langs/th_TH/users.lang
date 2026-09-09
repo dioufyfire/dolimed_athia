@@ -1,0 +1,11 @@
+# Dolibarr language file - fr_FR - users
+CHARSET=ยูทีเอฟ-8
+ContactCard=บันทึกข้อมูลการติดต่อ
+NoContactCard=ไม่มีการบันทึกข้อมูลการติดต่อ
+LinkToCompanyContact=เชื่อมโยงคนไข้/ติดต่อ
+LinkedToDolibarrThirdParty=เชื่อมโยงผู้ป่วย
+CreateDolibarrThirdParty=สร้างผู้ป่วย
+ConfirmCreateContact=คุณแน่ใจหรือไม่ว่าต้องการสร้างบัญชีสำหรับผู้ติดต่อนี้?
+ConfirmCreateLogin=คุณแน่ใจหรือไม่ว่าต้องการสร้างบัญชีสำหรับสมาชิกนี้?
+ConfirmCreateThirdParty=คุณแน่ใจหรือไม่ว่าต้องการสร้างผู้ป่วยสำหรับสมาชิกนี้?
+NameToCreate=ชื่อผู้ป่วยที่ต้องการสร้าง

@@ -1,0 +1,3 @@
+# Dolibarr language file - fr_FR - install
+CHARSET=ইউটিএফ-৮
+KeepDefaultValuesWamp=Comme vous utilisez l'Assistant d'Installation Dolibarr depuis DoliMed, les valeurs proposées aux paramètres sont déjà optimisées. Ne les modifier qu'en connaissance de cause.

@@ -1,0 +1,4 @@
+# Dolibarr language file - fr_FR - interventions
+CHARSET=ยูทีเอฟ-8
+CustomerDoesNotHavePrefix=Le tiers/คนไข้ n'a pas de préfixe de défini
+NameAndSignatureOfExternalContact=Nom et Signature du Tiers/ผู้ป่วย :

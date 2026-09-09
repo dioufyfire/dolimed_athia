@@ -1,0 +1,15 @@
+# Dolibarr language file - en_US - commercial
+CHARSET=UTF-8
+ActionOnCompany=Įvykis pacientui
+ActionOnContact=Įvykis susisiekus
+SalesRepresentative=Po to seka
+SalesRepresentatives=Po to seka
+SalesRepresentativeFollowUp=Gydytojai (referentai)
+SalesRepresentativeSignature=Gydytojai (parašas)
+NoSalesRepresentativeAffected=Nėra konkretaus gydytojo
+ShowPatient=Rodyti pacientą
+ListOfCustomers=Trečiųjų šalių / pacientų sąrašas
+ListOfPatients=Pacientų sąrašas
+TasksHistoryForThisContact=Veiksmai, susiję su šiuo kontaktu
+ActionAC_FAC=Siųsti konsultaciją el. paštu
+ActionAC_REL=Pakartotinai siųsti konsultaciją el. paštu

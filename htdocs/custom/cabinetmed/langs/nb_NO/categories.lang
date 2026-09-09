@@ -1,0 +1,10 @@
+# Dolibarr language file - en_US - categories
+CHARSET=UTF-8
+PatientsCategoriesArea=Kategorier av pasientområde
+PatientIsInCustomersCategories=Denne pasienten er innenfor følgende kategorier
+PatientsCategoryShort=Pasientkategori
+PatientsCategoriesShort=Pasientkategorier
+ThisCategoryHasNoCustomer=Denne kategorien har ingen pasienter
+AssignedToPatients=Angi en pasient
+AssignedToThePatients=Angi en pasient
+CatCusListPatients=Liste over pasientkategorier

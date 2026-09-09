@@ -1,0 +1,10 @@
+# Dolibarr language file - en_US - main
+CHARSET=UTF-8
+ContactsAddressesForCompany=Kontakty/adresy tohto pacienta alebo tretej strany
+ActionsOnCompany=Udalosti u tohto pacienta alebo tretej strany
+ByCompanies=Podľa pacienta
+NbOfPatients=Počet pacientov
+PatientPreview=Náhľad pacienta
+ShowPatientPreview=Zobraziť náhľad pacienta
+RefPatient=Referenčné číslo pacienta.
+ContactDefault_societe=Kontakty

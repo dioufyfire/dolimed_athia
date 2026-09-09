@@ -1,0 +1,5 @@
+# Dolibarr language file - fr_FR - agenda
+CHARSET=UTF-8
+NewCompanyToDolibarr=Patient creé
+AgendaShowBirthdayEvents=Afficher jubileumskorrespondenter
+AgendaHideBirthdayEvents=Cacher jubileumskorrespondenter

@@ -1,0 +1,5 @@
+# Dolibarr language file - fr_FR - agenda
+CHARSET=UTF-8
+NewCompanyToDolibarr=Bệnh nhân creé
+AgendaShowBirthdayEvents=Phóng viên kỷ niệm Afficher
+AgendaHideBirthdayEvents=Phóng viên kỷ niệm Cacher

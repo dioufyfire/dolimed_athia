@@ -1,0 +1,15 @@
+# Dolibarr language file - en_US - commercial
+CHARSET=یوتی‌اف-۸
+ActionOnCompany=رویداد روی بیمار
+ActionOnContact=رویداد در تماس
+SalesRepresentative=به دنبال آن
+SalesRepresentatives=به دنبال آن
+SalesRepresentativeFollowUp=پزشکان (معرف)
+SalesRepresentativeSignature=پزشکان (امضا)
+NoSalesRepresentativeAffected=پزشک خاصی نیست
+ShowPatient=نمایش بیمار
+ListOfCustomers=فهرست اشخاص ثالث/بیماران
+ListOfPatients=فهرست بیماران
+TasksHistoryForThisContact=اقدامات مربوط به این مخاطب
+ActionAC_FAC=ارسال مشاوره از طریق ایمیل
+ActionAC_REL=ارسال مجدد مشاوره از طریق ایمیل

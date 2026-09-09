@@ -1,0 +1,6 @@
+# Dolibarr language file - fr_FR - other
+CHARSET=ยูทีเอฟ-8
+Notify_NOTIFY_VAL_FAC=การตรวจยืนยันการปรึกษาผู้ป่วย
+ProfIdShortDesc=<b>รหัสศาสตราจารย์ %s</b> est une information qui dépend du pays du patient.<br>ตัวอย่างที่ตราไว้ เทเลอจ่าย <b>%s</b>, il s'agit du code <b>%s</b>.
+NewCompanyToDolibarr=ผู้ป่วย %s ajouté
+CustomerPaymentDoneInDolibarr=ผู้ป่วยที่ต้องชำระเงิน %s

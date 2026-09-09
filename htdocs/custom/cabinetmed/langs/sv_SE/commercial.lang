@@ -1,0 +1,15 @@
+# Dolibarr language file - en_US - commercial
+CHARSET=UTF-8
+ActionOnCompany=Händelse på patienten
+ActionOnContact=Händelse vid kontakt
+SalesRepresentative=Följt av
+SalesRepresentatives=Följt av
+SalesRepresentativeFollowUp=Läkare (referent)
+SalesRepresentativeSignature=Läkare (underskrift)
+NoSalesRepresentativeAffected=Ingen särskild läkare
+ShowPatient=Visa patient
+ListOfCustomers=Lista över tredje parter/patienter
+ListOfPatients=Lista över patienter
+TasksHistoryForThisContact=Åtgärder gällande den här kontakten
+ActionAC_FAC=Skicka konsultation via e-post
+ActionAC_REL=Skicka om konsultationen via e-post

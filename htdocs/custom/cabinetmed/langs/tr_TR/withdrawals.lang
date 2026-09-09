@@ -1,0 +1,5 @@
+# Dolibarr language file - fr_FR - withdrawals
+CHARSET=UTF-8
+NoInvoiceToWithdraw=Hastayla 'Prélèvement' ödeme modunda konsültasyona girin ve ön hazırlıklara dikkat edin. Bir talepte bulunmak için faturanın 'Prélèvement' bölümünü izleyin.
+ThirdPartyBankCode=Hasta bankası kodu
+ThirdPartyDeskCode=Hasta kodu

@@ -1,0 +1,15 @@
+# Dolibarr language file - en_US - commercial
+CHARSET=UTF-8
+ActionOnCompany=Подія у пацієнта
+ActionOnContact=Подія під час контакту
+SalesRepresentative=Далі
+SalesRepresentatives=Далі
+SalesRepresentativeFollowUp=Лікарі (референти)
+SalesRepresentativeSignature=Лікарі (підпис)
+NoSalesRepresentativeAffected=Без конкретного лікаря
+ShowPatient=Показати пацієнту
+ListOfCustomers=Список третіх сторін/пацієнтів
+ListOfPatients=Список пацієнтів
+TasksHistoryForThisContact=Дії щодо цього контакту
+ActionAC_FAC=Надіслати консультацію електронною поштою
+ActionAC_REL=Надіслати консультацію повторно електронною поштою

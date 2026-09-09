@@ -1,0 +1,9 @@
+# Dolibarr language file - fr_FR - compta
+CHARSET=یوتی‌اف-۸
+PaymentCustomerInvoice=بیمار مشاوره Règlement
+ListOfCustomerPayments=Liste des Règlements بیماران
+CustomerAccountancyCode=کد تخفیف بیمار
+ByPatients=بیمار پار
+ErrorWrongAccountancyCodeForCompany=پورت کد compta بیمار نادرست %s
+COMPTA_ACCOUNT_CUSTOMER=بیمار سازگار با کد به صورت پیشفرض (بیمار بدون تعریف کامل)
+COMPTA_ACCOUNT_SUPPLIER=سازگار با کد fournisseur par défaut (بیمار بدون تعریف کامل)

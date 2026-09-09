@@ -1,0 +1,7 @@
+# Dolibarr language file - en_US - errors
+CHARSET=یوتی‌اف-۸
+ErrorThisContactIsAlreadyDefinedAsThisType=این متناظر از قبل به عنوان متناظر برای این نوع تعریف شده است
+ErrorBadPatientName=نام بیمار بد
+ErrorBadCustomerCodeSyntax=سینتکس کد بیمار صحیح نیست
+ErrorCustomerCodeRequired=مدیریت کد بیمار
+ErrorCustomerCodeAlreadyUsed=کد بیمار قبلاً استفاده شده است

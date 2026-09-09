@@ -1,0 +1,37 @@
+# Dolibarr language file - en_US - admin
+CHARSET=UTF-8
+ExtraFieldsThirdParties=Dopolnjujoče lastnosti (tretja oseba/pacient)
+ExtraFieldsContacts=Dopolnilni atributi (stiki)
+UseSearchToSelectCompany= Za izbiro pacienta uporabite polje z avtomatskim dokončanjem (namesto kombiniranega seznama).
+ActivityStateToSelectCompany= Dodajte možnost filtriranja za skrivanje/prikaz pacientov, ki so ali niso spremljani
+ViewFullDateActions= Ogled celotnega datuma dejanj v pacientovi kartici
+ModuleFamilyCrm=Upravljanje odnosov s strankami ali pacienti (CRM)
+GenericMaskCodes2=<b>{cccc}</b> koda stranke/pacienta z n znaki<br><b>{cccc000}</b> kodi stranke/pacienta z n znaki sledi števec, namenjen stranka. Ta števec, namenjen stranki, se ponastavi hkrati z globalnim števcem.<br><b>{tttt}</b> Koda tipa tretje osebe na n znakih (glejte slovar - tipi tretjih oseb).<br>
+
+# Modules= undefined
+Module1Name= Tretje osebe/pacienti
+Module1Desc= Upravljanje pacientov in stikov
+Permission121= Posvetujte se s pacientom
+Permission122= Ustvari/spremeni pacienta (+ posvetovanja in pregledi)
+Permission125= Izbriši paciente (+ posvetovanja in preglede)
+Permission126= Izvoz pacientov
+Permission262= Razširi dostop na vse paciente (ne le na tiste, ki so povezani z uporabnikom).<br>Ne velja za zunanje uporabnike (vedno so omejeni na sebe za predloge, naročila, račune, pogodbe itd.).<br>Ne velja za projekte (samo pravila o dovoljenjih za projekte, vidnosti in zadevah dodelitve).
+Permission281= Posvetujte se z vsemi stiki
+Permission282= Ustvarjanje/spreminjanje stikov
+Permission283= Izbriši stike
+Permission286= Izvozi stike
+DictionaryCompanyType= Spol pacienta
+DictionaryCompanyJuridicalType= Vrsta dejavnosti pacienta ali pravni status tretjih oseb
+DictionaryTypeContact= Vrste stikov
+MotifConsultation=Razlog za posvetovanje
+DiagnostiqueLesionnel=Diagnostika lezij
+Examens=Izpiti
+ExamenConclusion=Zaključek izpita
+BankNameList=Seznam bank
+
+CompanySetup= Nastavitev modula za paciente
+CompanyCodeChecker=Model za ustvarjanje in preverjanje kode pacienta
+CashDeskThirdPartyForSell=Generični pacient za prodajo
+CashDeskBankAccountForSell=Bančni račun za uporabo gotovine
+CashDeskBankAccountForCheque=Bančni račun za uporabo pri nakazilih čekov
+CashDeskBankAccountForCB=Bančni račun za uporabo kreditne kartice

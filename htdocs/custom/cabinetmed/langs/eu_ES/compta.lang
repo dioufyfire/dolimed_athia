@@ -1,0 +1,9 @@
+# Dolibarr language file - fr_FR - compta
+CHARSET=UTF-8
+PaymentCustomerInvoice=Araudia kontsulta pazientea
+ListOfCustomerPayments=Gaixoen arauen zerrenda
+CustomerAccountancyCode=Pazientearen kodea
+ByPatients=Paziente paregabea
+ErrorWrongAccountancyCodeForCompany=Pazientearen kodea okerra da %s
+COMPTA_ACCOUNT_CUSTOMER=Pazientearen kode kontabilizatua ezinbestekoa da (ez da zehaztu pazientearen fitxan)
+COMPTA_ACCOUNT_SUPPLIER=Hornitzaileen kode kontabilizatua (pazientearen fitxan zehaztu gabe dago)

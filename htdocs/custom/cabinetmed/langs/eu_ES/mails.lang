@@ -1,0 +1,5 @@
+# Dolibarr language file - en_US - mails
+CHARSET=UTF-8
+MailingModuleDescContactCompanies=Hirugarrenen/pazienteen kontaktuak (motaren arabera)
+MailingModuleDescContactsByCompanyCategory=Hirugarrenen/pazienteen kontaktuak (kategoriaren arabera)
+MailingModuleDescContactsByFunction=Hirugarrenen/pazienteen kontaktuak (espezialitatearen arabera)

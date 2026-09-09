@@ -1,0 +1,10 @@
+# Dolibarr language file - en_US - categories
+CHARSET=ยูทีเอฟ-8
+PatientsCategoriesArea=หมวดหมู่พื้นที่ผู้ป่วย
+PatientIsInCustomersCategories=ผู้ป่วยรายนี้อยู่ในกลุ่มต่อไปนี้
+PatientsCategoryShort=หมวดหมู่ผู้ป่วย
+PatientsCategoriesShort=หมวดหมู่ผู้ป่วย
+ThisCategoryHasNoCustomer=หมวดหมู่นี้ไม่มีผู้ป่วย
+AssignedToPatients=ตั้งค่าผู้ป่วย
+AssignedToThePatients=ตั้งค่าผู้ป่วย
+CatCusListPatients=รายชื่อหมวดหมู่ผู้ป่วย

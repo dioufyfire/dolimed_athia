@@ -1,0 +1,37 @@
+# Dolibarr language file - en_US - admin
+CHARSET=UTF-8
+ExtraFieldsThirdParties=Doplnkové atribúty (tretia strana/pacient)
+ExtraFieldsContacts=Doplnkové atribúty (kontakty)
+UseSearchToSelectCompany= Na výber pacienta použite pole s automatickým dopĺňaním (namiesto kombinovaného zoznamu).
+ActivityStateToSelectCompany= Pridajte možnosť filtrovania na skrytie/zobrazenie pacientov, ktorí sú alebo nie sú sledovaní
+ViewFullDateActions= Zobraziť úplný dátum akcií v karte pacienta
+ModuleFamilyCrm=Riadenie vzťahov so zákazníkmi alebo pacientmi (CRM)
+GenericMaskCodes2=<b>{cccc}</b> kód klienta/pacienta s n znakmi<br><b>{cccc000}</b> za kódom klienta/pacienta s n znakmi nasleduje počítadlo určené pre zákazník. Toto počítadlo určené pre zákazníka sa vynuluje súčasne s globálnym počítadlom.<br><b>{tttt}</b> Kód typu tretej strany na n znakoch (pozri slovník - typy tretích strán).<br>
+
+# Modules= undefined
+Module1Name= Tretie strany/Pacienti
+Module1Desc= Spravujte pacientov a kontakty
+Permission121= Konzultujte s pacientom
+Permission122= Vytvoriť/upraviť pacienta (+ konzultácie a vyšetrenia)
+Permission125= Odstrániť pacientov (+ konzultácie a vyšetrenia)
+Permission126= Exportovať pacientov
+Permission262= Rozšíriť prístup na všetkých pacientov (nielen na tých, ktorí sú prepojení s používateľom).<br>Neplatí pre externých používateľov (vždy obmedzený na seba pre návrhy, objednávky, faktúry, zmluvy atď.).<br>Neplatí pre projekty (iba pravidlá týkajúce sa povolení projektu, viditeľnosti a záležitostí priradenia).
+Permission281= Preštudujte si všetky kontakty
+Permission282= Vytvoriť/upraviť kontakty
+Permission283= Odstrániť kontakty
+Permission286= Exportovať kontakty
+DictionaryCompanyType= Pohlavie pacienta
+DictionaryCompanyJuridicalType= Typ činnosti pacienta alebo právne postavenie tretích strán
+DictionaryTypeContact= Typy kontaktov
+MotifConsultation=Dôvod konzultácie
+DiagnostiqueLesionnel=Diagnostika lézií
+Examens=Skúšky
+ExamenConclusion=Záver skúšky
+BankNameList=Zoznam bánk
+
+CompanySetup= Nastavenie modulu Pacient
+CompanyCodeChecker=Model na generovanie a kontrolu kódu pacienta
+CashDeskThirdPartyForSell=Generický pacient na predaj
+CashDeskBankAccountForSell=Bankový účet na použitie v hotovosti
+CashDeskBankAccountForCheque=Bankový účet na vklad šekom
+CashDeskBankAccountForCB=Bankový účet na použitie pre kreditnú kartu

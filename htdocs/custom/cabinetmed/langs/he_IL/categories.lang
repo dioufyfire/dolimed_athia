@@ -1,0 +1,10 @@
+# Dolibarr language file - en_US - categories
+CHARSET=UTF-8
+PatientsCategoriesArea=קטגוריות של אזור המטופל
+PatientIsInCustomersCategories=מטופל זה נמצא בקטגוריות הבאות
+PatientsCategoryShort=קטגוריית חולים
+PatientsCategoriesShort=קטגוריות מטופלים
+ThisCategoryHasNoCustomer=בקטגוריה זו אין מטופל
+AssignedToPatients=הגדר מטופל
+AssignedToThePatients=הגדר מטופל
+CatCusListPatients=רשימת קטגוריות מטופלים

@@ -1,0 +1,5 @@
+# Dolibarr language file - en_US - mails
+CHARSET=UTF-8
+MailingModuleDescContactCompanies=Trečiųjų šalių / pacientų kontaktai (pagal tipą)
+MailingModuleDescContactsByCompanyCategory=Trečiųjų šalių / pacientų kontaktai (pagal kategoriją)
+MailingModuleDescContactsByFunction=Trečiųjų šalių / pacientų kontaktai (pagal specialybę)

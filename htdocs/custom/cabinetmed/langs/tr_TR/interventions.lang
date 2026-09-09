@@ -1,0 +1,4 @@
+# Dolibarr language file - fr_FR - interventions
+CHARSET=UTF-8
+CustomerDoesNotHavePrefix=Katmanlar/hastanın tanım ön eki yok
+NameAndSignatureOfExternalContact=Katmanların/hastanın imzası:

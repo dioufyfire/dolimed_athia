@@ -1,0 +1,14 @@
+# Dolibarr language file - fr_FR - boxes
+CHARSET=یوتی‌اف-۸
+BoxLastPatients=آخرین بیماران اصلاح‌شده
+BoxLastContacts=آخرین مخاطبین
+BoxTotalUnpaidCustomerBills=مجموع مشاوره‌های بدون هزینه
+BoxTitleNbOfPatients=تعداد بیمار
+BoxTitleLastPatients=آخرین %s بیماران ثبت شده
+BoxTitleLastModifiedPatients=آخرین بیماران اصلاح‌شده %s
+BoxTitleTotalUnpaidCustomerBills=مشاوره‌های بدون حقوق
+BoxTitleLastModifiedContacts=آخرین مخاطبین اصلاح‌شده %s
+NoRecordedPatients=بیمار ثبت نشده است
+NoRecordedContacts=هیچ تماسی ثبت نشده است
+NoRecordedInvoices=مشاوره ای ثبت نشده است
+NoUnpaidCustomerBills=مشاوره بدون حقوق نداریم

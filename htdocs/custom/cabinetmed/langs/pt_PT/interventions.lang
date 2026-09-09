@@ -1,0 +1,4 @@
+# Dolibarr language file - fr_FR - interventions
+CHARSET=UTF-8
+CustomerDoesNotHavePrefix=O tiers/paciente não tem prefixo de definição
+NameAndSignatureOfExternalContact=Nome e assinatura de tiers/paciente :

@@ -1,0 +1,37 @@
+# Dolibarr language file - en_US - admin
+CHARSET=UTF-8
+ExtraFieldsThirdParties=Thuộc tính bổ sung (bên thứ ba/bệnh nhân)
+ExtraFieldsContacts=Thuộc tính bổ sung (liên hệ)
+UseSearchToSelectCompany= Sử dụng trường có chức năng tự động hoàn thành để chọn bệnh nhân (thay vì danh sách kết hợp).
+ActivityStateToSelectCompany= Thêm tùy chọn lọc để ẩn/hiển thị bệnh nhân được theo dõi hoặc không được theo dõi
+ViewFullDateActions= Xem ngày đầy đủ các hành động vào thẻ bệnh nhân
+ModuleFamilyCrm=Quản lý quan hệ khách hàng hoặc bệnh nhân (CRM)
+GenericMaskCodes2=<b>{cccc}</b> mã khách hàng/bệnh nhân trên n ký tự<br><b>{cccc000}</b> mã khách hàng/bệnh nhân trên n ký tự được theo sau bởi một bộ đếm dành riêng cho khách hàng. Bộ đếm này dành riêng cho khách hàng được đặt lại cùng lúc với bộ đếm toàn cục.<br><b>{tttt}</b> Mã của loại bên thứ ba trên n ký tự (xem dictionary-thirdparty types).<br>
+
+# Modules= undefined
+Module1Name= Bên thứ ba/Bệnh nhân
+Module1Desc= Quản lý bệnh nhân và danh bạ
+Permission121= Tham khảo ý kiến bệnh nhân
+Permission122= Tạo/sửa đổi bệnh nhân (+tham vấn và khám)
+Permission125= Xóa bệnh nhân (+tham vấn và khám)
+Permission126= Xuất bệnh nhân
+Permission262= Mở rộng quyền truy cập cho tất cả bệnh nhân (Không chỉ những bệnh nhân được liên kết với người dùng).<br>Không hiệu quả đối với người dùng bên ngoài (luôn giới hạn cho chính họ đối với các đề xuất, đơn đặt hàng, hóa đơn, hợp đồng, v.v.).<br>Không hiệu quả đối với các dự án (chỉ có các quy tắc về quyền dự án, khả năng hiển thị và các vấn đề phân công).
+Permission281= Tham khảo tất cả các địa chỉ liên lạc
+Permission282= Tạo/sửa đổi danh bạ
+Permission283= Xóa danh bạ
+Permission286= Xuất danh bạ
+DictionaryCompanyType= Giới tính của bệnh nhân
+DictionaryCompanyJuridicalType= Loại hoạt động của bệnh nhân hoặc tình trạng pháp lý của bên thứ ba
+DictionaryTypeContact= Các loại liên lạc
+MotifConsultation=Lý do tham vấn
+DiagnostiqueLesionnel=Chẩn đoán tổn thương
+Examens=Kỳ thi
+ExamenConclusion=Kết luận kỳ thi
+BankNameList=Danh sách các ngân hàng
+
+CompanySetup= Thiết lập mô-đun Bệnh nhân
+CompanyCodeChecker=Mô hình tạo và kiểm tra mã bệnh nhân
+CashDeskThirdPartyForSell=Bệnh nhân chung chung để bán
+CashDeskBankAccountForSell=Tài khoản ngân hàng để sử dụng tiền mặt
+CashDeskBankAccountForCheque=Tài khoản ngân hàng để sử dụng cho việc gửi séc
+CashDeskBankAccountForCB=Tài khoản ngân hàng để sử dụng thẻ tín dụng

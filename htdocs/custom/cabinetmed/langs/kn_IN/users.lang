@@ -1,0 +1,11 @@
+# Dolibarr language file - fr_FR - users
+CHARSET=ಯುಟಿಎಫ್ -8
+ContactCard=ಸಂಪರ್ಕ ದಾಖಲೆ
+NoContactCard=ಸಂಪರ್ಕಗಳಲ್ಲಿ ಯಾವುದೇ ದಾಖಲೆ ಇಲ್ಲ.
+LinkToCompanyContact=ರೋಗಿಯನ್ನು / ಸಂಪರ್ಕವನ್ನು ಲಿಂಕ್ ಮಾಡಿ
+LinkedToDolibarrThirdParty=ರೋಗಿಯನ್ನು ಲಿಂಕ್ ಮಾಡಿ
+CreateDolibarrThirdParty=ರೋಗಿಯನ್ನು ರಚಿಸಿ
+ConfirmCreateContact=ಈ ಸಂಪರ್ಕಕ್ಕಾಗಿ ನೀವು ಖಾತೆಯನ್ನು ರಚಿಸಲು ಖಚಿತವಾಗಿ ಬಯಸುತ್ತೀರಾ?
+ConfirmCreateLogin=ಈ ಸದಸ್ಯರಿಗಾಗಿ ನೀವು ಖಾತೆಯನ್ನು ರಚಿಸಲು ಖಚಿತವಾಗಿ ಬಯಸುತ್ತೀರಾ?
+ConfirmCreateThirdParty=ಈ ಸದಸ್ಯರಿಗಾಗಿ ನೀವು ರೋಗಿಯನ್ನು ರಚಿಸಲು ಖಚಿತವಾಗಿ ಬಯಸುತ್ತೀರಾ?
+NameToCreate=ರಚಿಸಬೇಕಾದ ರೋಗಿಯ ಹೆಸರು

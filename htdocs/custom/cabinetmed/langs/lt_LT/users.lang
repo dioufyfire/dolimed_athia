@@ -1,0 +1,11 @@
+# Dolibarr language file - fr_FR - users
+CHARSET=UTF-8
+ContactCard=Kontaktinis įrašas
+NoContactCard=Nėra įrašų tarp kontaktų
+LinkToCompanyContact=Susieti pacientą / kontaktą
+LinkedToDolibarrThirdParty=Susieti pacientą
+CreateDolibarrThirdParty=Sukurti pacientą
+ConfirmCreateContact=Ar tikrai norite sukurti paskyrą šiam kontaktui?
+ConfirmCreateLogin=Ar tikrai norite sukurti paskyrą šiam nariui?
+ConfirmCreateThirdParty=Ar tikrai norite sukurti pacientą šiam nariui?
+NameToCreate=Paciento vardas, kurį reikia sukurti

@@ -1,0 +1,5 @@
+# Dolibarr language file - fr_FR - withdrawals
+CHARSET=UTF-8
+NoInvoiceToWithdraw=Bệnh nhân được tư vấn Aucune trong chế độ trả tiền 'Prélèvement' và yêu cầu được ưu tiên và chú ý. Aller sur l'onglet 'Prélèvement' de la fiche Facture pour faire une Demande.
+ThirdPartyBankCode=Mã số ngân hàng bệnh nhân
+ThirdPartyDeskCode=Mã lệnh bệnh nhân

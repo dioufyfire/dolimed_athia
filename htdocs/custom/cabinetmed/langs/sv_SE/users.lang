@@ -1,0 +1,11 @@
+# Dolibarr language file - fr_FR - users
+CHARSET=UTF-8
+ContactCard=Kontaktpost
+NoContactCard=Ingen post bland kontakterna
+LinkToCompanyContact=Länka patient/kontakt
+LinkedToDolibarrThirdParty=Länkpatient
+CreateDolibarrThirdParty=Skapa en patient
+ConfirmCreateContact=Är du säker på att du vill skapa ett konto för den här kontakten?
+ConfirmCreateLogin=Är du säker på att du vill skapa ett konto för den här medlemmen?
+ConfirmCreateThirdParty=Är du säker på att du vill skapa en patient för den här medlemmen?
+NameToCreate=Namn på patienten som ska skapas

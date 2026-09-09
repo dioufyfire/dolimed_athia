@@ -1,0 +1,37 @@
+# Dolibarr language file - en_US - admin
+CHARSET=UTF-8
+ExtraFieldsThirdParties=Papildomi atributai (trečioji šalis / pacientas)
+ExtraFieldsContacts=Papildomi atributai (kontaktai)
+UseSearchToSelectCompany= Pacientui pasirinkti naudokite lauką su automatinio užbaigimo funkcija (vietoj kombinuotojo sąrašo).
+ActivityStateToSelectCompany= Pridėkite filtravimo parinktį, kad paslėptumėte / rodytumėte pacientus, kurie yra stebimi arba nestebimi
+ViewFullDateActions= Žr. visą veiksmų datą paciento kortelėje
+ModuleFamilyCrm=Klientų arba pacientų ryšių valdymas (CRM)
+GenericMaskCodes2=<b>{cccc}</b> kliento / paciento kodas, sudarytas iš n simbolių<br><b>{cccc000}</b> po kliento / paciento kodo, sudaryto iš n simbolių, seka skaitiklis, skirtas klientas. Šis klientui skirtas skaitiklis nustatomas iš naujo tuo pačiu metu kaip ir bendras skaitiklis.<br><b>{tttt}</b> Trečiosios šalies tipo kodas, sudarytas iš n simbolių (žr. žodyną – trečiųjų šalių tipai).<br>
+
+# Modules= undefined
+Module1Name= Trečiosios šalys / pacientai
+Module1Desc= Tvarkyti pacientus ir kontaktus
+Permission121= Konsultuokite pacientą
+Permission122= Sukurti / modifikuoti pacientą (+konsultacijas ir tyrimus)
+Permission125= Ištrinti pacientus (+konsultacijas ir tyrimus)
+Permission126= Eksportuoti pacientus
+Permission262= Suteikti prieigą visiems pacientams (ne tik tiems, kurie susieti su naudotoju).<br>Negalioja išoriniams naudotojams (pasiūlymų, užsakymų, sąskaitų faktūrų, sutarčių ir kt. prieiga visada apribota tik jais).<br>Negalioja projektams (svarbios tik projekto leidimų, matomumo ir priskyrimo taisyklės).
+Permission281= Pasitarkite su visais kontaktais
+Permission282= Kurti / modifikuoti kontaktus
+Permission283= Ištrinti kontaktus
+Permission286= Eksportuoti kontaktus
+DictionaryCompanyType= Paciento lytis
+DictionaryCompanyJuridicalType= Paciento veiklos tipas arba trečiųjų šalių teisinis statusas
+DictionaryTypeContact= Kontaktų tipai
+MotifConsultation=Konsultacijos priežastis
+DiagnostiqueLesionnel=Pažeidimų diagnostika
+Examens=Egzaminai
+ExamenConclusion=Egzamino išvada
+BankNameList=Bankų sąrašas
+
+CompanySetup= Paciento modulio sąranka
+CompanyCodeChecker=Modelis paciento kodui generuoti ir tikrinti
+CashDeskThirdPartyForSell=Bendrinis pacientas parduodamas
+CashDeskBankAccountForSell=Banko sąskaita, skirta gryniesiems pinigams
+CashDeskBankAccountForCheque=Banko sąskaita, naudojama čekių įnešimui
+CashDeskBankAccountForCB=Banko sąskaita, naudojama kreditinei kortelei

@@ -1,0 +1,15 @@
+# Dolibarr language file - en_US - commercial
+CHARSET=ยูทีเอฟ-8
+ActionOnCompany=เหตุการณ์เกี่ยวกับผู้ป่วย
+ActionOnContact=กิจกรรมติดต่อ
+SalesRepresentative=ตามด้วย
+SalesRepresentatives=ตามด้วย
+SalesRepresentativeFollowUp=แพทย์ (ผู้อ้างอิง)
+SalesRepresentativeSignature=แพทย์ (ลายเซ็น)
+NoSalesRepresentativeAffected=ไม่มีแพทย์เฉพาะทาง
+ShowPatient=แสดงผู้ป่วย
+ListOfCustomers=รายชื่อบุคคลภายนอก/ผู้ป่วย
+ListOfPatients=รายชื่อผู้ป่วย
+TasksHistoryForThisContact=การดำเนินการเกี่ยวกับการติดต่อนี้
+ActionAC_FAC=ส่งคำปรึกษาทางอีเมล์
+ActionAC_REL=ส่งคำปรึกษาอีกครั้งทางอีเมล์

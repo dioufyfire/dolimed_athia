@@ -1,0 +1,14 @@
+# Dolibarr language file - fr_FR - boxes
+CHARSET=UTF-8
+BoxLastPatients=מטופלים שהשתנו לאחרונה
+BoxLastContacts=אנשי קשר נמשכים
+BoxTotalUnpaidCustomerBills=סך כל הייעוץ שלא בתשלום
+BoxTitleNbOfPatients=מספר מטופלים
+BoxTitleLastPatients=חולים אחרונים שתועדו ב-%s
+BoxTitleLastModifiedPatients=מטופלים אחרונים שעברו שינוי %s
+BoxTitleTotalUnpaidCustomerBills=ייעוץ ללא תשלום
+BoxTitleLastModifiedContacts=אנשי הקשר האחרונים ששונו ב-%s
+NoRecordedPatients=לא נרשם מטופל
+NoRecordedContacts=לא נרשם איש קשר
+NoRecordedInvoices=לא נרשמה התייעצות
+NoUnpaidCustomerBills=אין ייעוץ ללא תשלום

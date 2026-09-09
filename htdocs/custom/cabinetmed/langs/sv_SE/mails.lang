@@ -1,0 +1,5 @@
+# Dolibarr language file - en_US - mails
+CHARSET=UTF-8
+MailingModuleDescContactCompanies=Kontakter från tredje part/patienter (efter typ)
+MailingModuleDescContactsByCompanyCategory=Kontakter från tredje part/patienter (efter kategori)
+MailingModuleDescContactsByFunction=Kontakter till tredje part/patienter (efter specialitet)

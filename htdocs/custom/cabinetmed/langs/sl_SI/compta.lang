@@ -1,0 +1,9 @@
+# Dolibarr language file - fr_FR - compta
+CHARSET=UTF-8
+PaymentCustomerInvoice=Règlement posvetovanje pacient
+ListOfCustomerPayments=Liste des règlements bolnikov
+CustomerAccountancyCode=Koda compta pacienta
+ByPatients=Par pacient
+ErrorWrongAccountancyCodeForCompany=Koda compta pacient nepravilna pour %s
+COMPTA_ACCOUNT_CUSTOMER=Koda kompatibilnega pacienta par défaut (si non défini sur fiche pacient)
+COMPTA_ACCOUNT_SUPPLIER=Code comptable fournisseur par défaut (si non défini sur fiche pacient)

@@ -1,0 +1,37 @@
+# Dolibarr language file - en_US - admin
+CHARSET=UTF-8
+ExtraFieldsThirdParties=Osagarri diren ezaugarriak (hirugarrena/pazientea)
+ExtraFieldsContacts=Osagarri diren ezaugarriak (kontaktuak)
+UseSearchToSelectCompany= Erabili osatze automatikoa duen eremu bat paziente bat hautatzeko (konbinazio-zerrenda baten ordez).
+ActivityStateToSelectCompany= Gehitu iragazketa aukera bat jarraipena egiten zaien edo ez zaien pazienteak ezkutatzeko/erakusteko
+ViewFullDateActions= Ikusi ekintzen data osoa pazientearen txartelean
+ModuleFamilyCrm=Bezero edo Paziente Harremanen Kudeaketa (CRM)
+GenericMaskCodes2=<b>{cccc}</b> bezero/paziente kodea n karaktereetan<br><b>{cccc000}</b> bezero/paziente kodea n karaktereetan bezeroarentzako kontagailu bat du ondoren. Bezeroari eskainitako kontagailu hau kontagailu orokorrarekin batera berrezartzen da.<br><b>{tttt}</b> Hirugarrenen motaren kodea n karaktereetan (ikus hiztegia-hirugarrenen motak).<br>
+
+# Modules= undefined
+Module1Name= Hirugarrenak/Pazienteak
+Module1Desc= Pazienteak eta kontaktuak kudeatu
+Permission121= Kontsultatu pazienteari
+Permission122= Pazientea sortu/aldatu (+kontsultak eta azterketak)
+Permission125= Ezabatu pazienteak (+kontsultak eta azterketak)
+Permission126= Esportatu pazienteak
+Permission262= Zabaldu sarbidea paziente guztientzat (ez bakarrik erabiltzailearekin lotutakoentzat).<br>Ez da eraginkorra kanpoko erabiltzaileentzat (beti mugatuta eurentzat proposamen, eskaera, faktura, kontratu, etab.).<br>Ez da eraginkorra proiektuentzat (proiektuen baimen, ikusgarritasun eta esleipen gaiei buruzko arauak soilik).
+Permission281= Kontaktu guztiak kontsultatu
+Permission282= Kontaktuak sortu/aldatu
+Permission283= Ezabatu kontaktuak
+Permission286= Esportatu kontaktuak
+DictionaryCompanyType= Pazientearen sexua
+DictionaryCompanyJuridicalType= Pazientearen jarduera mota edo hirugarrenen egoera juridikoa
+DictionaryTypeContact= Kontaktu motak.
+MotifConsultation=Kontsultaren arrazoia.
+DiagnostiqueLesionnel=Lesioen diagnostikoa
+Examens=Azterketak
+ExamenConclusion=Azterketaren Ondorioa
+BankNameList=Bankuen zerrenda
+
+CompanySetup= Paziente moduluaren konfigurazioa
+CompanyCodeChecker=Pazientearen kodea sortu eta egiaztatzeko eredua
+CashDeskThirdPartyForSell=Salmentarako paziente generikoa
+CashDeskBankAccountForSell=Dirua jasotzeko banku-kontua
+CashDeskBankAccountForCheque=Txekeak gordailatzeko erabiliko den banku-kontua
+CashDeskBankAccountForCB=Kreditu txartelarekin erabiltzeko banku-kontua

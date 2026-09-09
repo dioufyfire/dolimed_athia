@@ -1,0 +1,5 @@
+# Dolibarr language file - en_US - mails
+CHARSET=UTF-8
+MailingModuleDescContactCompanies=Liên hệ của bên thứ ba/bệnh nhân (theo loại)
+MailingModuleDescContactsByCompanyCategory=Liên hệ của bên thứ ba/bệnh nhân (theo danh mục)
+MailingModuleDescContactsByFunction=Liên hệ của bên thứ ba/bệnh nhân (theo chuyên khoa)
