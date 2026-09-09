@@ -275,6 +275,23 @@ $butactionbg       	  = empty($user->conf->THEME_ELDY_ENABLE_PERSONALIZED) ? (!g
 $textbutaction        = empty($user->conf->THEME_ELDY_ENABLE_PERSONALIZED) ? (!getDolGlobalString('THEME_ELDY_TEXTBTNACTION') ? $textbutaction : $conf->global->THEME_ELDY_TEXTBTNACTION) : (empty($user->conf->THEME_ELDY_TEXTBTNACTION) ? $textbutaction : $user->conf->THEME_ELDY_TEXTBTNACTION);
 $fontsize             = empty($user->conf->THEME_ELDY_ENABLE_PERSONALIZED) ? (!getDolGlobalString('THEME_ELDY_FONT_SIZE1') ? $fontsize : $conf->global->THEME_ELDY_FONT_SIZE1) : (empty($user->conf->THEME_ELDY_FONT_SIZE1) ? $fontsize : $user->conf->THEME_ELDY_FONT_SIZE1);
 $fontsizesmaller      = empty($user->conf->THEME_ELDY_ENABLE_PERSONALIZED) ? (!getDolGlobalString('THEME_ELDY_FONT_SIZE2') ? $fontsize : $conf->global->THEME_ELDY_FONT_SIZE2) : (empty($user->conf->THEME_ELDY_FONT_SIZE2) ? $fontsize : $user->conf->THEME_ELDY_FONT_SIZE2);
+
+// ATHIA: enlarge the interface base font by 2px, including personalized sizes.
+if (is_numeric($fontsize)) {
+	$fontsize = (string) ((float) $fontsize + 2);
+} elseif (preg_match('/^([0-9]+(?:\\.[0-9]+)?)px$/i', trim($fontsize), $athiaFontMatch)) {
+	$fontsize = (string) ((float) $athiaFontMatch[1] + 2);
+} else {
+	$fontsize = 'calc('.$fontsize.' + 2px)';
+}
+// Relative small-text sizes already grow with the base font.
+if (is_numeric($fontsizesmaller)) {
+	$fontsizesmaller = (string) ((float) $fontsizesmaller + 2);
+} elseif (preg_match('/^([0-9]+(?:\\.[0-9]+)?)px$/i', trim($fontsizesmaller), $athiaFontMatch)) {
+	$fontsizesmaller = (string) ((float) $athiaFontMatch[1] + 2);
+}
+unset($athiaFontMatch);
+
 $heightrow			  = empty($user->conf->THEME_ELDY_ENABLE_PERSONALIZED) ? (!getDolGlobalString('THEME_ELDY_USECOMOACTROW') ? '155%' : '300%') : (empty($user->conf->THEME_ELDY_USECOMOACTROW) ? '155%' : '300%');
 // Hover color
 $colorbacklinepairhover = ((!isset($conf->global->THEME_ELDY_USE_HOVER) || (string) $conf->global->THEME_ELDY_USE_HOVER === '255,255,255') ? '' : ($conf->global->THEME_ELDY_USE_HOVER === '1' ? 'e6edf0' : $conf->global->THEME_ELDY_USE_HOVER));
@@ -420,8 +437,4 @@ require __DIR__.'/global.inc.php';
 
 if (is_object($db)) {
 	$db->close();
-}
-
-body, .v22-ui, .side-menu, .main-menu {
-    font-size: 12px !important; /* Ajustez la taille (13px ou 14px au lieu des ~12px par défaut) */
 }

@@ -280,6 +280,23 @@ $butactionbg       	 = empty($user->conf->THEME_ELDY_ENABLE_PERSONALIZED) ? getD
 $textbutaction     = empty($user->conf->THEME_ELDY_ENABLE_PERSONALIZED) ? getDolGlobalString('THEME_ELDY_TEXTBTNACTION', $textbutaction) : getDolUserString('THEME_ELDY_TEXTBTNACTION', $textbutaction);
 $fontsize            = empty($user->conf->THEME_ELDY_ENABLE_PERSONALIZED) ? getDolGlobalString('THEME_ELDY_FONT_SIZE1', $fontsize) : getDolUserString('THEME_ELDY_FONT_SIZE1', $fontsize);
 $fontsizesmaller     = empty($user->conf->THEME_ELDY_ENABLE_PERSONALIZED) ? getDolGlobalString('THEME_ELDY_FONT_SIZE2', $fontsize) : getDolUserString('THEME_ELDY_FONT_SIZE2', $fontsize);
+
+// ATHIA: enlarge the interface base font by 2px, including personalized sizes.
+if (is_numeric($fontsize)) {
+	$fontsize = (string) ((float) $fontsize + 2);
+} elseif (preg_match('/^([0-9]+(?:\\.[0-9]+)?)px$/i', trim($fontsize), $athiaFontMatch)) {
+	$fontsize = (string) ((float) $athiaFontMatch[1] + 2);
+} else {
+	$fontsize = 'calc('.$fontsize.' + 2px)';
+}
+// Relative small-text sizes already grow with the base font.
+if (is_numeric($fontsizesmaller)) {
+	$fontsizesmaller = (string) ((float) $fontsizesmaller + 2);
+} elseif (preg_match('/^([0-9]+(?:\\.[0-9]+)?)px$/i', trim($fontsizesmaller), $athiaFontMatch)) {
+	$fontsizesmaller = (string) ((float) $athiaFontMatch[1] + 2);
+}
+unset($athiaFontMatch);
+
 $heightrow			 = empty($user->conf->THEME_ELDY_ENABLE_PERSONALIZED) ? (getDolGlobalString('THEME_ELDY_USECOMOACTROW') ? '300%' : '155%') : (getDolUserString('THEME_ELDY_USECOMOACTROW') ? '300%' : '155%');
 
 // Hover color
