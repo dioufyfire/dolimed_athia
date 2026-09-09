@@ -122,7 +122,13 @@ if ($action == 'delete' || ($conf->use_javascript_ajax && empty($conf->dol_use_j
 
 
 $linkback = '<a href="'.dol_buildpath('/cabinetmed/patients.php', 1).'">'.$langs->trans("BackToList").'</a>';
-dol_banner_tab($object, 'socid', $linkback, ($user->socid ? 0 : 1), 'rowid', 'nom');
+// ATHIA: omit unused contact details from the banner without altering patient data.
+$athiaBannerObject = clone $object;
+foreach (array('fax', 'url', 'state', 'state_code', 'region') as $athiaField) {
+	$athiaBannerObject->$athiaField = '';
+}
+dol_banner_tab($athiaBannerObject, 'socid', $linkback, ($user->socid ? 0 : 1), 'rowid', 'nom');
+unset($athiaBannerObject);
 
 print '<div class="fichecenter">';
 print '<div class="fichehalfleft">';
@@ -206,45 +212,6 @@ while ($i <= $NBPROFIDMAX) {
 }
 //if ($j % 2 == 1)  print '<td colspan="2"></td></tr>';
 
-// Num secu
-print '<tr>';
-print '<td class="nowrap">'.$langs->trans('PatientVATIntra').'</td><td>';
-if ($object->tva_intra) {
-	$s='';
-	$s.=$object->tva_intra;
-	$s.='<input type="hidden" id="tva_intra" name="tva_intra" maxlength="20" value="'.$object->tva_intra.'">';
-
-	if (!getDolGlobalString('MAIN_DISABLEVATCHECK') && isInEEC($object)) {
-		$s.=' &nbsp; ';
-
-		if ($conf->use_javascript_ajax) {
-			$widthpopup = 600;
-			if (!empty($conf->dol_use_jmobile)) {
-				$widthpopup = 350;
-			}
-			$heightpopup = 400;
-			print "\n";
-			print '<script type="text/javascript">';
-			print "function CheckVAT(a) {\n";
-			if ($mysoc->country_code == 'GR' && $object->country_code == 'GR' && !empty($u)) {
-				print "GRVAT(a,'{$u}','{$p}','{$myafm}');\n";
-			} else {
-				print "newpopup('".DOL_URL_ROOT."/societe/checkvat/checkVatPopup.php?vatNumber='+a, '".dol_escape_js($langs->trans("VATIntraCheckableOnEUSite"))."', ".$widthpopup.", ".$heightpopup.");\n";
-			}
-			print "}\n";
-			print '</script>';
-			print "\n";
-			$s.='<a href="#" class="hideonsmartphone" onclick="CheckVAT( $(\'#tva_intra\').val() );">'.$langs->trans("VATIntraCheck").'</a>';
-			$s = $form->textwithpicto($s, $langs->trans("VATIntraCheckDesc", $langs->transnoentitiesnoconv("VATIntraCheck")), 1);
-		} else {
-			$s .= '<a href="'.$langs->transcountry("VATIntraCheckURL", $object->country_id).'" class="hideonsmartphone" target="_blank" rel="noopener noreferrer">'.img_picto($langs->trans("VATIntraCheckableOnEUSite"), 'help').'</a>';
-		}
-	}
-	print $s;
-} else {
-	print '&nbsp;';
-}
-print '</td></tr>';
 
 // Type + Staff => Genre
 $arr = $formcompany->typent_array(1);
@@ -255,9 +222,6 @@ print '</td>';
 //print '<td>'.$langs->trans("Staff").'</td><td>'.$object->effectif.'</td>';
 print '</tr>';
 
-// Juridical status => Secteur activité
-print '<tr><td>'.$langs->trans('ActivityBranch').'</td><td>'.$object->forme_juridique.'</td>';
-print '</tr>';
 
 print '</table>';
 print '</div>';
@@ -301,7 +265,13 @@ if (getDolGlobalInt('MAIN_MULTILANGS')) {
 
 // Other attributes
 $parameters = array('socid' => $socid, 'colspan' => ' colspan="3"', 'colspanvalue' => '3');
+// ATHIA: hide measurements only on this patient card, without changing their definitions.
+$athiaExtraFields = $extrafields;
+$extrafields = clone $extrafields;
+unset($extrafields->attributes[$object->table_element]['label']['height'], $extrafields->attributes[$object->table_element]['label']['weight']);
 include DOL_DOCUMENT_ROOT.'/core/tpl/extrafields_view.tpl.php';
+$extrafields = $athiaExtraFields;
+unset($athiaExtraFields);
 
 // Inject age if a date is defined
 

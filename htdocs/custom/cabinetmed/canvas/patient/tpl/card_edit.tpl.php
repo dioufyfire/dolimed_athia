@@ -95,7 +95,7 @@ if (GETPOST("name")) {
 	$object->address=GETPOST("address");
 	$object->zip=GETPOST("zipcode");
 	$object->town=GETPOST("town");
-	$object->state_id=GETPOST("departement_id");
+	$object->state_id = GETPOSTINT('state_id');
 	$object->parent = GETPOSTINT('parent_company_id');
 
 	$object->socialnetworks = array();
@@ -168,6 +168,15 @@ print_fiche_titre($langs->trans("EditPatient"));
 print '<form enctype="multipart/form-data" action="'.$_SERVER["PHP_SELF"].'?socid='.$object->id.'" method="post" name="formsoc">';
 print '<input type="hidden" name="action" value="update">';
 print '<input type="hidden" name="token" value="'.newToken().'">';
+// ATHIA: keep existing values when fields omitted from the patient form are saved.
+foreach (array('tva_intra', 'forme_juridique_code', 'fax', 'url', 'state_id') as $athiaField) {
+	print '<input type="hidden" name="'.$athiaField.'" value="'.dol_escape_htmltag(isset($object->$athiaField) ? $object->$athiaField : '').'">';
+}
+foreach (array('height', 'weight') as $athiaField) {
+	$athiaOption = 'options_'.$athiaField;
+	print '<input type="hidden" name="'.$athiaOption.'" value="'.dol_escape_htmltag(isset($object->array_options[$athiaOption]) ? $object->array_options[$athiaOption] : '').'">';
+}
+
 print '<input type="hidden" name="socid" value="'.$object->id.'">';
 print '<input type="hidden" name="entity" value="'.$object->entity.'">';
 print '<input type="hidden" name="private" value="0">';
@@ -359,9 +368,9 @@ print '</textarea></td></tr>';
 
 // Zip / Town
 print '<tr><td>'.$langs->trans('Zip').'</td><td>';
-print $formcompany->select_ziptown($object->zip, 'zipcode', array('town','selectcountry_id','departement_id'), 6);
+print $formcompany->select_ziptown($object->zip, 'zipcode', array('town','selectcountry_id'), 6);
 print '</td><td>'.$langs->trans('Town').'</td><td>';
-print $formcompany->select_ziptown($object->town, 'town', array('zipcode','selectcountry_id','departement_id'));
+print $formcompany->select_ziptown($object->town, 'town', array('zipcode','selectcountry_id'));
 print '</td></tr>';
 
 // Country
@@ -370,18 +379,6 @@ print $form->select_country($object->country_id, 'country_id');
 if ($user->admin) print info_admin($langs->trans("YouCanChangeValuesForThisListFromDictionarySetup"), 1);
 print '</td></tr>';
 
-// State
-if (!getDolGlobalString('SOCIETE_DISABLE_STATE')) {
-	if ((getDolGlobalInt('MAIN_SHOW_REGION_IN_STATE_SELECT') == 1 || getDolGlobalInt('MAIN_SHOW_REGION_IN_STATE_SELECT') == 2)) {
-		print '<tr><td>'.$form->editfieldkey('Region-State', 'state_id', '', $object, 0).'</td><td colspan="3">';
-	} else {
-		print '<tr><td>'.$form->editfieldkey('State', 'state_id', '', $object, 0).'</td><td colspan="3">';
-	}
-
-	print img_picto('', 'state', 'class="pictofixedwidth"');
-	print $formcompany->select_state($object->state_id, $object->country_code);
-	print '</td></tr>';
-}
 
 // Phone / Fax
 print '<tr><td>'.$form->editfieldkey('Phone', 'phone', GETPOST('phone', 'alpha'), $object, 0).'</td>';
@@ -392,13 +389,6 @@ if ($conf->browser->layout == 'phone') {
 print '<td>'.$form->editfieldkey('PhoneMobile', 'phone_mobile', GETPOST('phone_mobile', 'alpha'), $object, 0).'</td>';
 print '<td'.($conf->browser->layout == 'phone' ? ' colspan="3"' : '').'>'.img_picto('', 'object_phoning_mobile', 'class="pictofixedwidth"').' <input type="text" name="phone_mobile" id="phone_mobile" class="maxwidth200 widthcentpercentminusx" value="'.(GETPOSTISSET('phone_mobile') ? GETPOST('phone_mobile', 'alpha') : $object->phone_mobile).'"></td></tr>';
 
-print '<td>'.$form->editfieldkey('Fax', 'fax', GETPOST('fax', 'alpha'), $object, 0).'</td>';
-print '<td'.($conf->browser->layout == 'phone' ? ' colspan="3"' : '').'>'.img_picto('', 'object_phoning_fax', 'class="pictofixedwidth"').' <input type="text" name="fax" id="fax" class="maxwidth200 widthcentpercentminusx" value="'.(GETPOSTISSET('fax') ? GETPOST('fax', 'alpha') : $object->fax).'"></td>';
-print '</tr>';
-
-// Web
-print '<tr><td>'.$form->editfieldkey('Web', 'url', GETPOST('url', 'alpha'), $object, 0).'</td>';
-print '<td colspan="3">'.img_picto('', 'globe', 'class="pictofixedwidth"').' <input type="text" name="url" id="url" class="maxwidth200onsmartphone maxwidth300 widthcentpercentminusx " value="'.(GETPOSTISSET('url') ? GETPOST('url', 'alpha') : $object->url).'"></td></tr>';
 
 // EMail
 print '<tr><td>'.$form->editfieldkey('EMail', 'email', GETPOST('email', 'alpha'), $object, 0, 'string', '', (getDolGlobalString('SOCIETE_EMAIL_MANDATORY'))).'</td>';
@@ -568,14 +558,6 @@ if (getDolGlobalString('ACCOUNTING_FORCE_ENABLE_VAT_REVERSE_CHARGE')) {
     	}
 
 
-// Num secu
-print '<tr>';
-print '<td class="nowrap">'.$langs->trans('PatientVATIntra').'</td>';
-print '<td class="nowrap" colspan="3">';
-$s ='<input type="text" class="flat" name="tva_intra" size="18" maxlength="20" value="'.$object->tva_intra.'">';
-print $s;
-print '</td></tr>';
-
 // Sexe
 print '<tr><td>'.$langs->trans("Gender").'</td><td colspan="3">';
 if ((float) DOL_VERSION <= 23) {
@@ -589,11 +571,6 @@ if ($user->admin) {
 print '</td>';
 print '</tr>';
 
-// Juridical status
-print '<tr><td>'.$langs->trans('ActivityBranch').'</td><td colspna="3">';
-print $formcompany->select_juridicalstatus($object->forme_juridique_code, $object->country_code, "AND (f.module = 'cabinetmed' OR f.code > '100000')");
-print '</td>';
-print '</tr>';
 
 // Default language
 if (getDolGlobalInt('MAIN_MULTILANGS')) {
@@ -645,7 +622,13 @@ if (isModEnabled('category') && $user->hasRight('categorie', 'lire')) {
 
 // Other attributes
 $parameters = array('socid'=>$object->id, 'colspan' => ' colspan="3"', 'colspanvalue' => '3');
+// ATHIA: hide measurements only on this patient card, without changing their definitions.
+$athiaExtraFields = $extrafields;
+$extrafields = clone $extrafields;
+unset($extrafields->attributes[$object->table_element]['label']['height'], $extrafields->attributes[$object->table_element]['label']['weight']);
 include DOL_DOCUMENT_ROOT.'/core/tpl/extrafields_edit.tpl.php';
+$extrafields = $athiaExtraFields;
+unset($athiaExtraFields);
 
 // Webservices url/key
 if (isModEnabled('webservicesclient')) {

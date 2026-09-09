@@ -250,6 +250,16 @@ dol_htmloutput_errors($GLOBALS['error'], $GLOBALS['errors']);
 <input type="hidden" name="canvas" value="<?php echo $GLOBALS['canvas'] ?>">
 <input type="hidden" name="action" value="add">
 <input type="hidden" name="token" value="<?php echo newToken(); ?>">
+<?php
+// ATHIA: keep existing values when fields omitted from the patient form are saved.
+foreach (array('tva_intra', 'forme_juridique_code', 'fax', 'url', 'state_id') as $athiaField) {
+	print '<input type="hidden" name="'.$athiaField.'" value="'.dol_escape_htmltag(isset($object->$athiaField) ? $object->$athiaField : '').'">';
+}
+foreach (array('height', 'weight') as $athiaField) {
+	$athiaOption = 'options_'.$athiaField;
+	print '<input type="hidden" name="'.$athiaOption.'" value="'.dol_escape_htmltag(isset($object->array_options[$athiaOption]) ? $object->array_options[$athiaOption] : '').'">';
+}
+?>
 <input type="hidden" name="backtopage" value="<?php echo empty($backtopage) ? '' : $backtopage; ?>">
 <input type="hidden" name="private" value="0">
 <input type="hidden" name="status" value="1">
@@ -399,13 +409,13 @@ print '</td></tr>';
 
 // Zip / Town
 print '<tr><td>'.$langs->trans('Zip').'</td><td>';
-print $formcompany->select_ziptown($object->zip, 'zipcode', array('town','selectcountry_id','departement_id'), 0, 0, '', 'maxwidth100');
+print $formcompany->select_ziptown($object->zip, 'zipcode', array('town','selectcountry_id'), 0, 0, '', 'maxwidth100');
 print '</td>';
 if ($conf->browser->layout == 'phone') {
 	print '</tr><tr>';
 }
 print '<td>'.$langs->trans('Town').'</td><td>';
-print $formcompany->select_ziptown($object->town, 'town', array('zipcode','selectcountry_id','departement_id'), 0, 0, '', 'maxwidth150 quatrevingtpercent');
+print $formcompany->select_ziptown($object->town, 'town', array('zipcode','selectcountry_id'), 0, 0, '', 'maxwidth150 quatrevingtpercent');
 print '</td></tr>';
 
 // Country
@@ -417,34 +427,19 @@ if ($user->admin) {
 }
 print '</td></tr>';
 
-// State
-if (!getDolGlobalString('SOCIETE_DISABLE_STATE')) {
-	print '<tr><td>'.$langs->trans('State').'</td><td colspan="3" class="maxwidthonsmartphone">';
-
-	if ($object->country_id) {
-		print img_picto('', 'state', 'class="pictofixedwidth"');
-		print $formcompany->select_state($object->state_id, $object->country_code, 'state_id', 'minwidth200 maxwidth300 widthcentpercentminusx');
-	} else {
-		print $countrynotdefined;
-	}
-	print '</td></tr>';
-}
 
 // Phone / Fax
 //print '<tr><td>'.$form->editfieldkey('Phone', 'phone', '', $object, 0).'</td>';
 //print '<td'.($conf->browser->layout == 'phone' ? ' colspan="3"' : '').'>'.img_picto('', 'object_phoning', 'class="pictofixedwidth"').' <input type="text" name="phone" id="phone" class="maxwidth200 widthcentpercentminusx" value="'.(GETPOSTISSET('phone') ? GETPOST('phone', 'alpha') : $object->phone).'"></td>';
 
-if ($conf->browser->layout == 'phone') {
-	print '</tr><tr>';
-}
-
 // Phone mobile
-print '<td>'.$form->editfieldkey('PhoneMobile', 'phone_mobile', '', $object, 0).'</td>';
-print '<td'.($conf->browser->layout == 'phone' ? ' colspan="3"' : '').'>'.img_picto('', 'object_phoning_mobile', 'class="pictofixedwidth"').' <input type="text" name="phone_mobile" id="phone_mobile" class="maxwidth200 widthcentpercentminusx" value="'.(GETPOSTISSET('phone_mobile') ? GETPOST('phone_mobile', 'alpha') : $object->phone_mobile).'"></td></tr>';
+print '<tr><td>'.$form->editfieldkey('PhoneMobile', 'phone_mobile', '', $object, 0).'</td>';
+print '<td colspan="3">'.img_picto('', 'object_phoning_mobile', 'class="pictofixedwidth"').' <input type="text" name="phone_mobile" id="phone_mobile" class="maxwidth200 widthcentpercentminusx" value="'.(GETPOSTISSET('phone_mobile') ? GETPOST('phone_mobile', 'alpha') : $object->phone_mobile).'"></td></tr>';
 
 // Email
 print '<tr><td>'.$form->editfieldkey('EMail', 'email', '', $object, 0, 'string', '', getDolGlobalInt('SOCIETE_EMAIL_MANDATORY')).'</td>';
 print '<td'.(($conf->browser->layout == 'phone') || !isModEnabled('mailing') ? ' colspan="3"' : '').'>'.img_picto('', 'object_email', 'class="pictofixedwidth"').' <input type="text" class="maxwidth200 widthcentpercentminusx" name="email" id="email" value="'.$object->email.'"></td>';
+print '</tr>';
 
 /*
 		print '<tr>';
@@ -513,11 +508,6 @@ while ($i <= $NBPROFIDMAX) {
 		print '</td>';
 		print '</tr>';
 */
-		print '<tr>';
-		print '<td class="nowrap">'.$langs->trans('PatientVATIntra').'</td>';
-		print '<td class="nowrap" colspan="3">';
-		print '<input type="text" class="flat" name="tva_intra" size="18" maxlength="32" value="'.$object->tva_intra.'">';
-		print '</td></tr>';
 
 		// Genre
 		print '<tr><td>'.$langs->trans("Gender").'</td><td colspan="3">'."\n";
@@ -578,7 +568,13 @@ while ($i <= $NBPROFIDMAX) {
 
 		// Other attributes
 		$parameters = array('socid'=>(empty($socid) ? 0 : $socid), 'colspan' => ' colspan="3"', 'colspanvalue' => '3');
+		// ATHIA: hide measurements only on this patient card, without changing their definitions.
+		$athiaExtraFields = $extrafields;
+		$extrafields = clone $extrafields;
+		unset($extrafields->attributes[$object->table_element]['label']['height'], $extrafields->attributes[$object->table_element]['label']['weight']);
 		include DOL_DOCUMENT_ROOT.'/core/tpl/extrafields_add.tpl.php';
+		$extrafields = $athiaExtraFields;
+		unset($athiaExtraFields);
 
 		// Assign a sale representative
 		print '<tr>';
