@@ -111,7 +111,6 @@ $search_parent_name = trim(GETPOST('search_parent_name', 'alpha'));
 // Load sale and categ filters
 $search_sale = GETPOST("search_sale", "int");
 $search_categ = GETPOST("search_categ", "int");
-$search_diagles = GETPOST("search_diagles", "alphanohtml");
 $search_contactid = GETPOST("search_contactid", "int");
 
 $type = GETPOST('type', 'alpha');
@@ -466,13 +465,6 @@ if (!empty($searchCategorySupplierList)) {
 	}
 }
 
-if ($search_diagles && $search_diagles != '-1') {
-	$label = dol_getIdFromCode($db, $search_diagles, 'cabinetmed_diaglec', 'code', 'label');
-	$sql .= " AND EXISTS (SELECT c.rowid FROM ".MAIN_DB_PREFIX."cabinetmed_cons as c";
-	$sql .= " WHERE c.fk_soc = s.rowid";
-	$sql .= natural_search("c.diaglesprinc", $label);
-	$sql .= ")";
-}
 
 if ($search_all) {
 	$sql .= natural_search(array_keys($fieldstosearchall), $search_all);
@@ -655,7 +647,6 @@ if ($search_stcomm != '')  $param.='&search_stcomm='.urlencode($search_stcomm);
 //if ($search_level_from != '') $param.='&search_level_from='.urlencode($search_level_from);
 //if ($search_level_to != '')   $param.='&search_level_to='.urlencode($search_level_to);
 if ($search_import_key != '') $param.='&search_import_key='.urlencode($search_import_key);
-if ($search_diagles != '' && $search_diagles != '-1')    $param.='&search_diagles='.urlencode($search_diagles);
 if ($type != '') $param.='&type='.urlencode($type);
 // Add $param from extra fields
 include DOL_DOCUMENT_ROOT.'/core/tpl/extrafields_list_search_param.tpl.php';
@@ -777,13 +768,6 @@ if (method_exists($form, 'select_contact')) {
 	$moreforfilter .= $form->selectcontacts(0, $search_contactid, 'search_contactid', $langs->trans('Correspondants'), '', '', 1, 'maxwidth300 widthcentpercentminusx');
 }
 $moreforfilter.='</div>';
-// To add filter on diagnostic
-$width="200";
-$moreforfilter .= '<div class="divsearchfield">';
-//$moreforfilter .= $langs->trans('DiagnostiqueLesionnel'). ': ';
-$moreforfilter .= img_picto('', 'briefcase-medical', 'class="pictofixedwidth"');
-$moreforfilter .= listdiagles(1, $width, 'search_diagles', $search_diagles, 'minwidth100imp maxwidth300 widthcentpercentminusx', $langs->trans('DiagnostiqueLesionnel'));
-$moreforfilter .= '</div>';
 
 $parameters=array('type'=>$type);
 $reshook=$hookmanager->executeHooks('printFieldPreListTitle', $parameters, $object, $action);    // Note that $action and $object may have been modified by hook
