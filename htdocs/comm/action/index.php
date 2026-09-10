@@ -2137,26 +2137,28 @@ function show_day_events($db, $day, $month, $year, $monthshown, $style, &$eventa
 
 					//var_dump($event->userassigned);
 					//var_dump($event->transparency);
-					print '<table class="centpercent cal_event';
+					print '<table class="centpercent cal_event athia-full-color';
 					print(empty($event->transparency) ? ' cal_event_notbusy' : ' cal_event_busy');
 					//if (empty($event->transparency) && empty($conf->global->AGENDA_NO_TRANSPARENT_ON_NOT_BUSY)) print ' opacitymedium';	// Not busy
 					print '" style="'.$h;
-					$colortouse = $color;
-					// If colortouse is similar than background, we force to change it.
+					// ATHIA: fill the entire card with the existing owner/calendar color.
+					$colortouse = ltrim((string) $color, '#');
+					if (!preg_match('/^[0-9a-f]{6}$/i', $colortouse)) {
+						$colortouse = '888888';
+					}
+					// Choose black or white text using relative luminance.
+					$luminance = 0;
+					foreach (array(0.2126, 0.7152, 0.0722) as $channel => $weight) {
+						$value = hexdec(substr($colortouse, $channel * 2, 2)) / 255;
+						$luminance += $weight * ($value <= 0.04045 ? $value / 12.92 : pow(($value + 0.055) / 1.055, 2.4));
+					}
+					$eventtextcolor = $luminance > 0.179 ? '#000000' : '#ffffff';
+					print 'background: #'.$colortouse.';color: '.$eventtextcolor.';--athia-event-text: '.$eventtextcolor.';';
 					if (empty($event->transparency) && !getDolGlobalString('AGENDA_NO_TRANSPARENT_ON_NOT_BUSY')) {
-						print 'background: #f0f0f0;';
 						print 'border-left: 5px solid #'.$colortouse.';';
 					} else {
-						print 'background: #f0f0f0;';
 						print 'border-left: 5px solid #'.dol_color_minus($colortouse, -3).';';
-						//print 'background: -webkit-gradient(linear, left top, left bottom, from(#'.dol_color_minus($colortouse, -3).'), to(#'.dol_color_minus($colortouse, -1).'));';
 					}
-					//print 'background: #'.$colortouse.';';
-					//print 'background: -webkit-gradient(linear, left top, left bottom, from(#'.dol_color_minus($color, -3).'), to(#'.dol_color_minus($color, -1).'));';
-					//if (!empty($event->transparency)) print 'background: #'.$color.'; background: -webkit-gradient(linear, left top, left bottom, from(#'.$color.'), to(#'.dol_color_minus($color,1).'));';
-					//else print 'background-color: transparent !important; background: none; border: 1px solid #bbb;';
-					//print ' -moz-border-radius:4px;"';
-					//print 'border: 1px solid #ccc" width="100%"';
 					print '">';
 
 					// First the tr of the event (only one tr for event is used, but several td)

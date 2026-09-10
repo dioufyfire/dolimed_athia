@@ -107,3 +107,19 @@ div.mainmenu.contacts {
 .cabpaymentthirdparty { border-top: 1px solid #AAA; margin-top: 4px; }
 	<?php
 }
+
+?>
+/* ATHIA: preserve contrast inside fully colored agenda cards. */
+table.cal_event.athia-full-color {
+	filter: none;
+	color: var(--athia-event-text);
+}
+table.cal_event.athia-full-color td {
+	background-color: transparent;
+}
+table.cal_event.athia-full-color a:not(.badge-status),
+table.cal_event.athia-full-color a:not(.badge-status):visited,
+table.cal_event.athia-full-color a:not(.badge-status):hover,
+table.cal_event.athia-full-color a:not(.badge-status):active {
+	color: var(--athia-event-text) !important;
+}
